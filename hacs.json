@@ -1,0 +1,6 @@
+{
+  "name": "Power Flow Card Plus Custom",
+  "render_readme": true,
+  "homeassistant": "2024.1.0",
+  "filename": "power-flow-card-plus-custom.js"
+}
