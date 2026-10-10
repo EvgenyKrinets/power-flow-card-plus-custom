@@ -1,4 +1,4 @@
-# Power Flow Card Plus Custom — v1.1.0
+# Power Flow Card Plus Custom — v1.1.1
 
 A standalone Home Assistant Lovelace card for live power and historical energy.
 
@@ -68,3 +68,8 @@ MIT. Inspired by Power Flow Card Plus / flixlix. The upstream MIT license and at
 - Historical energy graph.
 - Compare-date setting groundwork.
 - Editor entity selectors no longer rerender/close after every ordinary selection.
+
+
+## v1.1.1
+- Releases are delivered as tagged GitHub assets for HACS.
+- HACS manages the frontend resource update; a hard browser refresh is only a fallback if a client keeps stale cache.
