@@ -1,4 +1,4 @@
-# Power Flow Card Plus Custom — v1.0.0
+# Power Flow Card Plus Custom — v1.1.0
 
 A standalone Home Assistant Lovelace card for live power and historical energy.
 
@@ -60,3 +60,11 @@ For Energy mode choose cumulative energy sensors and set `mode: energy`. The car
 ## License / attribution
 
 MIT. Inspired by Power Flow Card Plus / flixlix. The upstream MIT license and attribution are preserved in this repository.
+
+
+## v1.1.0
+- Energy analysis summary with sold/bought kWh and monetary balance.
+- Separate grid purchase and sale tariffs with ILS/USD/EUR.
+- Historical energy graph.
+- Compare-date setting groundwork.
+- Editor entity selectors no longer rerender/close after every ordinary selection.
