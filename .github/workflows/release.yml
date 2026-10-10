@@ -1,0 +1,26 @@
+name: Release
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [package.json]
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: v
+        shell: bash
+        run: echo "version=v$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
+      - name: Create tag and GitHub release if missing
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.v.outputs.version }}
+        shell: bash
+        run: |
+          if gh release view "$VERSION" >/dev/null 2>&1; then exit 0; fi
+          git tag "$VERSION"
+          git push origin "$VERSION"
+          gh release create "$VERSION" power-flow-card-plus-custom.js --title "$VERSION" --generate-notes
