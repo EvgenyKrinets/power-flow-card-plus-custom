@@ -1,0 +1,12 @@
+{
+  "name": "power-flow-card-plus-custom",
+  "private": true,
+  "version": "1.0.0-dev.1",
+  "type": "module",
+  "description": "Power and energy flow card for Home Assistant with per-entity deadband, energy periods and multilingual UI",
+  "keywords": ["home-assistant","homeassistant","hass","dashboard","custom-cards","energy","power"],
+  "repository": {"type":"git","url":"git+https://github.com/EvgenyKrinets/power-flow-card-plus-custom.git"},
+  "author": "EvgenyKrinets; based on Power Flow Card Plus by flixlix",
+  "license": "MIT",
+  "scripts": {"build":"pnpm dlx rollup -c","dev":"rollup -c --watch"}
+}
